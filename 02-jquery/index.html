@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy E-Commerce</title>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+    href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    // Add product to cart
+    function addToCart(product, price) {
+
+        cart.push({
+            name: product,
+            price: price
+        });
+
+        total += price;
+
+        alert(product + " added to cart!");
+
+        updateCart();
+    }
+
+    // Update cart display
+    function updateCart() {
+
+        let cartList =
+            document.getElementById("cartItems");
+
+        cartList.innerHTML = "";
+
+        cart.forEach(item => {
+
+            cartList.innerHTML += `
+            <li>
+                <h3>${item.name}</h3>
+                <p>₹${item.price}</p>
+            </li>`;
+        });
+
+        document.getElementById(
+            "totalPrice"
+        ).innerHTML =
+            "Total: ₹" + total;
+
+        $("#cartItems").listview("refresh");
+    }
+
+    // Clear cart
+    function clearCart() {
+
+        cart = [];
+        total = 0;
+
+        updateCart();
+
+        alert("Cart Cleared!");
+    }
+</script>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>🛒 ShopEasy</h1>
+    </div>
+
+    <!-- Navbar -->
+    <div data-role="navbar">
+        <ul>
+            <li>
+                <a href="#home"
+                class="ui-btn-active">
+                Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#products">
+                Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#cart">
+                Cart 🛒
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+        <div class="hero-section">
+            <h2>Big Sale is Live 🎉</h2>
+
+            <p>
+                Best deals on electronics,
+                fashion & accessories
+            </p>
+
+            <a href="#products"
+            class="ui-btn">
+                Shop Now
+            </a>
+        </div>
+
+        <h2>Popular Categories</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <h3>📱 Electronics</h3>
+            </div>
+
+            <div class="category-card">
+                <h3>⌚ Watches</h3>
+            </div>
+
+            <div class="category-card">
+                <h3>🎧 Accessories</h3>
+            </div>
+            <div class="category-card">
+                <h3>👕 Fashion</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>© 2026 ShopEasy</h4>
+    </div>
+
+</div>
+
+<!-- PRODUCTS PAGE -->
+<div data-role="page" id="products">
+
+    <div data-role="header">
+        <h1>Products</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+        <div class="product-card">
+            <h3>📱 Smartphone</h3>
+            <p>Latest Android Phone</p>
+            <p class="price">₹19,999</p>
+
+            <button class="ui-btn"
+            onclick="addToCart(
+            'Smartphone',19999)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <h3>⌚ Smart Watch</h3>
+            <p>Fitness Tracking Watch</p>
+            <p class="price">₹2,999</p>
+
+            <button class="ui-btn"
+            onclick="addToCart(
+            'Smart Watch',2999)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <h3>🎧 Headphones</h3>
+            <p>Wireless Bluetooth</p>
+            <p class="price">₹1,999</p>
+
+            <button class="ui-btn"
+            onclick="addToCart(
+            'Headphones',1999)">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CART PAGE -->
+<div data-role="page" id="cart">
+
+    <div data-role="header">
+        <h1>My Cart 🛒</h1>
+    </div>
+
+    <div data-role="main"
+    class="ui-content">
+
+        <ul id="cartItems"
+        data-role="listview"
+        data-inset="true">
+        </ul>
+
+        <h3 id="totalPrice">
+            Total: ₹0
+        </h3>
+
+        <button class="ui-btn"
+        onclick="clearCart()">
+            Clear Cart
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CONTACT PAGE -->
+<div data-role="page" id="contact">
+
+    <div data-role="header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div data-role="main"
+    class="ui-content">
+
+        <label>Name</label>
+        <input type="text"
+        placeholder="Enter Name">
+
+        <label>Email</label>
+        <input type="email"
+        placeholder="Enter Email">
+
+        <label>Message</label>
+        <textarea
+        placeholder="Your message">
+        </textarea>
+
+        <button class="ui-btn">
+            Submit
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

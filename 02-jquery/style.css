@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+}
+
+/* Header */
+.ui-header {
+    background: linear-gradient(to right, #4e54c8, #8f94fb) !important;
+    color: white !important;
+    border: none !important;
+    font-size: 30px;
+}
+
+.ui-header h1 {
+    color: white !important;
+}
+
+/* Navbar */
+.ui-navbar ul li a {
+  margin-top: 10px;
+    background: white !important;
+    color: #333 !important;
+    font-size: medium;
+    font-weight: bold;
+
+
+}
+
+.ui-btn-active {
+    background: #4e54c8 !important;
+    color: white !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-section h2 {
+    font-size: 30px;
+}
+
+/* Categories */
+.category-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-card {
+    background: white;
+    width: 150px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card h3 {
+    color: #4e54c8;
+}
+
+.price {
+    color: green;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.ui-btn {
+    background: #4e54c8 !important;
+    color: white !important;
+    border-radius: 30px !important;
+    border: none !important;
+}
+
+/* Footer */
+.ui-footer {
+    background: #222 !important;
+    color: white !important;
+    border: none !important;
+    margin-top: 50px;
+}
+
+.ui-footer h4 {
+    color: white !important;
+}
