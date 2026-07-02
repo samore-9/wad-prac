@@ -1,4 +1,4 @@
-# Web Application Development (WAD) Practicals
+# Web Application Development Practicals
 
 This repository contains all my **Web Application Development (WAD)** practicals completed during the course. It serves as a collection of programs, experiments, and mini-projects covering the fundamental concepts of web development.
 
