@@ -6,6 +6,6 @@
 
 3a. Create a Node.JS Application which serves a static website.
 
-3b. Create four API using Node.JS, ExpressJS and MongoDB for CURD Operations on assignment 2.C.
+3b. Create four API using Node.JS, ExpressJS and MongoDB for CURD Operations on any project.
 
-4a. Create a simple Mobile Website using jQuery Mobile.
+4a. Create a Mobile Website using jQuery Mobile.
