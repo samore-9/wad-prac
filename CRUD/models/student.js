@@ -5,10 +5,7 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  age: {
-    type: Number,
-    required: true
-  },
+  age: Number,
   course: {
     type: String,
     required: true
